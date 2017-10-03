@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_GoTest">
+            <connections>
+                <outlet property="btn_camera" destination="sko-Ei-XIL" id="lZ3-iw-Iz5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="jfG-7t-yre"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sko-Ei-XIL">
+                    <rect key="frame" x="56" y="17" width="779" height="1024"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" secondItem="sko-Ei-XIL" secondAttribute="width" id="S2k-Ue-3F6"/>
+                    </constraints>
+                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" backgroundImage="record.png">
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="call_camera:" destination="-1" eventType="touchUpInside" id="ued-jE-vxc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sko-Ei-XIL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="eTy-Lw-jk9"/>
+                <constraint firstItem="sko-Ei-XIL" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-50" id="hYM-3E-mu4"/>
+                <constraint firstItem="sko-Ei-XIL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zMO-LU-Ntv"/>
+            </constraints>
+            <point key="canvasLocation" x="-3" y="-406"/>
+        </view>
+        <navigationItem title="Title" id="aB8-wh-R1b"/>
+    </objects>
+    <resources>
+        <image name="record.png" width="600" height="600"/>
+    </resources>
+</document>

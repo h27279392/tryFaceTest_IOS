@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_GoTest">
+            <connections>
+                <outlet property="Youtube" destination="8ky-j8-Lwg" id="TqA-Qq-7d9"/>
+                <outlet property="btn_closeY" destination="Hev-cp-reF" id="42p-UM-yyZ"/>
+                <outlet property="playerView" destination="rVV-2S-5tG" id="hvW-UJ-cTl"/>
+                <outlet property="table_notes" destination="Aqi-Ff-x5Z" id="ndI-Yx-Y2y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Aqi-Ff-x5Z">
+                    <rect key="frame" x="10" y="-30" width="580" height="630"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="w0I-f2-Xs0"/>
+                        <outlet property="delegate" destination="-1" id="6YX-Fe-0HI"/>
+                    </connections>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ky-j8-Lwg" userLabel="YoutubePlayer">
+                    <rect key="frame" x="0.0" y="296" width="592" height="304"/>
+                    <subviews>
+                        <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hev-cp-reF">
+                            <rect key="frame" x="277" y="-11" width="46" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="關閉">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btn_OnClick_Closer:" destination="-1" eventType="touchUpInside" id="Sjs-tG-1gB"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVV-2S-5tG" customClass="YTPlayerView">
+                            <rect key="frame" x="0.0" y="-196" width="600" height="39"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="rVV-2S-5tG" firstAttribute="centerX" secondItem="8ky-j8-Lwg" secondAttribute="centerX" id="FlZ-3V-xaZ"/>
+                        <constraint firstItem="Hev-cp-reF" firstAttribute="top" secondItem="8ky-j8-Lwg" secondAttribute="top" id="J64-JQ-bBG"/>
+                        <constraint firstItem="Hev-cp-reF" firstAttribute="height" secondItem="8ky-j8-Lwg" secondAttribute="height" multiplier="2:10" id="MBj-SC-fND"/>
+                        <constraint firstItem="rVV-2S-5tG" firstAttribute="width" secondItem="8ky-j8-Lwg" secondAttribute="width" id="VHj-LW-Ls2"/>
+                        <constraint firstItem="rVV-2S-5tG" firstAttribute="height" secondItem="8ky-j8-Lwg" secondAttribute="height" multiplier="8:10" id="c6d-8B-WiR"/>
+                        <constraint firstItem="rVV-2S-5tG" firstAttribute="bottom" secondItem="8ky-j8-Lwg" secondAttribute="bottom" id="cjc-Ma-XbA"/>
+                        <constraint firstItem="Hev-cp-reF" firstAttribute="trailing" secondItem="8ky-j8-Lwg" secondAttribute="trailing" id="r9J-9D-G4F"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8ky-j8-Lwg" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="9uO-37-zc5"/>
+                <constraint firstItem="Aqi-Ff-x5Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="MEM-e3-zWa"/>
+                <constraint firstItem="8ky-j8-Lwg" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="Sxi-9W-5yG"/>
+                <constraint firstAttribute="bottom" secondItem="Aqi-Ff-x5Z" secondAttribute="bottom" id="cUk-f6-bZh"/>
+                <constraint firstItem="8ky-j8-Lwg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kmn-XO-eiW"/>
+                <constraint firstItem="Aqi-Ff-x5Z" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" constant="-10" id="uL9-89-NLD"/>
+                <constraint firstItem="Aqi-Ff-x5Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-30" id="z6R-jh-tlB"/>
+            </constraints>
+            <point key="canvasLocation" x="357" y="234"/>
+        </view>
+    </objects>
+</document>
